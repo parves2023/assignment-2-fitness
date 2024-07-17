@@ -38,6 +38,7 @@ p{
     max-width: 1200px;
     margin: 35px auto;
     border-radius: 6px;
+    border: 1px solid red;
 }
 .dflex{
     display: flex;
@@ -48,7 +49,7 @@ p{
     background: rgb(230, 83, 60);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 32px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -57,6 +58,23 @@ p{
 
 .primary-button:hover {
     background: rgb(210, 63, 40);
+}
+
+.secondary-button {
+    border-radius: 46px;
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: rgb(255, 255, 254);
+    color: black;
 }
 
 
@@ -88,5 +106,53 @@ nav ul li a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
+/* navbar ends */
 
 
+/* hero section starts */
+main .hero{
+    justify-content: space-between;
+    padding: 3rem;
+    gap: 6rem;
+}
+.hero .text-area{
+    width: 520px;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+}
+
+.img-container{
+    position: relative;
+}
+.img-container p{
+    font-size: 13px;
+}
+.free-videos, .tutorial-videos{
+    position: absolute;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.21);
+}
+.free-videos{
+    top: 135px;
+    right: 0px;
+}
+.tutorial-videos{
+    bottom: 75px;
+    left: -85px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tutorial-videos .tomato-circle{
+    background-color: tomato;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+
+
+
+/* hero section ends */
