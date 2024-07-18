@@ -232,21 +232,88 @@ main .run-extra-mile .image-container img {
 
 
 
+/* bmi calculator section */
+
+.bmi-calculator{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.bmi-calculator .calculator-header{
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.bmi-calculator .calc-parent{
+  background-color: rgb(34, 34, 34);
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 
 
 
 
+ /* table chart */
+ table {
+  border-collapse: collapse; 
+  border: 1;
+  border-color: rgb(105, 105, 105);
+  margin: 3rem 0;
+  text-align: start;
+}
+th, td {
+  text-align: start;
+  padding: 1rem 3rem; 
+}
+.calc-parent .bmi{
+  justify-content: space-between;
+  align-items: center;
+}
+.calc-parent .calc{
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 
 
 
+/* inputs */
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px; 
+}
+.inputs .input-row input,.inputs .input-row select, .input-row3 select{
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(163, 163, 163);
+  padding: 14px 16px;
+}
+
+.inputs .input-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .7rem;
+}
+.inputs .input-row3{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.input-row input,
+.input-row select, .input-row3 select {
+  border: none;
+  outline: none;
+}
 
 
-
-
-
-
-
+/* ends bmi calculator section */
 
 
 
@@ -318,7 +385,11 @@ main .run-extra-mile .image-container img {
     font-size: 2rem;
   }
   .primary-button {
-    padding: 12px 18px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
+  .secondary-button {
+    padding: 12px 20px;
     font-size: 0.8rem;
   }
   /* nav */
@@ -389,4 +460,31 @@ main .run-extra-mile .image-container img {
     height: 100% !important;
     transform: translate(0,0) !important;
   }
+
+
+
+
+
+
+  /* bmi calc section start */
+  .bmi-calculator .calc-parent {
+    height: auto;
+    flex-direction: column;
+  }
+  .calc-parent .bmi {
+    flex-direction: column;
+}
+.calc-parent .calc {
+  width: 100%;
+}
+.bmi-calculator .calculator-header {
+  width: 100%;
+}
+.inputs .input-row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: .7rem;
+}
+  /* bmi calc section end*/
+
 }
