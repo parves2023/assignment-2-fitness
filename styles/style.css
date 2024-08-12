@@ -47,6 +47,12 @@ p {
 .dflex {
   display: flex;
 }
+.flex-col{
+  flex-direction: column;
+}
+.gap{
+  gap: 2.5rem;
+}
 
 .primary-button {
   border-radius: 46px;
@@ -109,6 +115,7 @@ nav ul li a:hover {
 }
 nav .bars {
   display: none;
+  cursor: pointer;
 }
 nav .bars i {
   color: white;
@@ -120,12 +127,14 @@ nav .bars i {
 /* hero section starts */
 .heros-parrent {
   background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.091) 50%,
-    rgba(255, 255, 255, 0.03) 100%
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.091) 20% 60%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
+
+
 main .hero {
   justify-content: space-between;
   gap: 6rem;
@@ -237,6 +246,128 @@ main .run-extra-mile .image-container img {
     height: 300%;
     transform: translate(-32rem, -12rem);
 }
+
+
+/* training section start*/
+
+.row1 ,.row2{
+  display: grid;
+  grid-template-columns: 25% 45% 30%;
+  height: 16rem;
+}
+.row2{
+  grid-template-columns: 40% 25% 35%;
+}
+
+.imgandtext {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+.imgandtext {
+  position: relative;
+}
+
+.imgandtext::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.row1 .imgandtext:nth-child(1)::before {
+  background-color: rgba(6, 255, 210, 0.5);
+}
+
+.row1 .imgandtext:nth-child(2)::before {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.row1 .imgandtext:nth-child(3)::before {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+.row2 .imgandtext:nth-child(1)::before {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.row2 .imgandtext:nth-child(2)::before {
+  background-color: rgba(66, 255, 0, 0.3);
+}
+
+.row2 .imgandtext:nth-child(3)::before {
+  background-color: rgba(0, 71, 255, 0.3);
+}
+
+
+
+
+
+.imgandtext img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.imgandtext p {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  z-index: 2; 
+  margin: 0;
+}
+.row1 .imgandtext:nth-child(1) p {
+  color: black;
+  bottom: 20px;
+  left: 20px;
+}
+
+.row1 .imgandtext:nth-child(2) p {
+  top: 20px;
+  left: 20px;
+}
+
+.row1 .imgandtext:nth-child(3) p {
+  bottom: 20px;
+  left: 20px;
+}
+
+
+.row2 .imgandtext:nth-child(1) p {
+  
+  right: 20px;
+  top: 20px;
+}
+
+.row2 .imgandtext:nth-child(2) p {
+  bottom: 20px;
+  left: 20px;
+}
+
+.row2 .imgandtext:nth-child(3) p {
+  bottom: 20px;
+  left: 20px;
+}
+
+
+
+/* training section end*/
 
 
 
@@ -592,6 +723,13 @@ footer .container ul a{
     width: 100%;
   }
 
+  /* trainings sec starts */
+  .row1 ,.row2{
+    height: 32rem;
+    grid-template-columns: 100%;
+   
+  }
+  /* trainings sec ends */
 
 
 
